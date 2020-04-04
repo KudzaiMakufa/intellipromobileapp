@@ -1,0 +1,32 @@
+
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>List</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen>
+    <ion-list-header>
+      Conversations
+   </ion-list-header>
+    <ion-list>
+      
+
+      
+        <ion-item *ngFor="let contact  of contacts" (click)="goToChat(contact.id)">
+          <ion-avatar slot="start">
+            <img [src]="icon">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{contact.name}}</h2>
+            <h3>{{contact.phone}}</h3>
+            <p>{{contact.department}}</p>
+          </ion-label>
+        </ion-item>  
+    
+     
+
+      
+    </ion-list>
+
+  </ion-content>
